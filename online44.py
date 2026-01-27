@@ -4,6 +4,24 @@ import time
 import telebot
 from telebot import types
 import random
+from flask import Flask
+from threading import Thread
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Я жив!"
+
+def run():
+    app.run(host='0.0.0.0', port=8080)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
+
+# Запускаем веб-сервер
+keep_alive()
 
 bot = telebot.TeleBot('8312989642:AAHnXUK1JBJamX_YtcyzZIVci5sk4tTmHIs')
 
@@ -221,3 +239,4 @@ def callback_query(call):
 
 print("Бот запущен и готов служить(P.S. Генерал гавс!)")
 bot.polling(none_stop=True)
+
