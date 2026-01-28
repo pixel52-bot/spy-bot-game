@@ -24,7 +24,7 @@ def keep_alive():
 # Запускаем веб-сервер
 keep_alive()
 
-bot = telebot.TeleBot('8312989642:AAHbM2oHLFeXc9rn_XUfb7tLQxJDiC92SNQ')
+bot = telebot.TeleBot('8312989642:AAF490PFvMKU3i3ah6SVtocNY6bPbjhm3u4')
 
 # --- ДАННЫЕ ---
 themes = {
@@ -240,6 +240,7 @@ def callback_query(call):
 
 print("Бот запущен и готов служить(P.S. Генерал гавс!)")
 bot.polling(none_stop=True)
+
 
 
 
