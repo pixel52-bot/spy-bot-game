@@ -18,6 +18,7 @@ def run():
 
 def keep_alive():
     t = Thread(target=run)
+    t.daemon = True
     t.start()
 
 # Запускаем веб-сервер
@@ -239,5 +240,6 @@ def callback_query(call):
 
 print("Бот запущен и готов служить(P.S. Генерал гавс!)")
 bot.polling(none_stop=True)
+
 
 
